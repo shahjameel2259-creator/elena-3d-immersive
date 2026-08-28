@@ -238,20 +238,6 @@ body[data-time="day"] .brand__logo--color { display: block; }
   display: flex; flex-direction: column; justify-content: flex-end;
   overflow: hidden;
 }
-.hero__bg {
-  position: absolute; inset: 0;
-  background: var(--night-bg);
-  transform: rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg));
-  transform-style: preserve-3d;
-  transition: transform 0.08s linear;
-}
-.hero__bg img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
-  transform: scale(1.12);
-  animation: heroIn 3.2s var(--ease) both;
-  will-change: transform;
-}
-@keyframes heroIn { from { transform: scale(1.22); opacity: 0.55; } to { transform: scale(1.12); opacity: 1; } }
 /* cursor-following glow + depth parallax */
 .hero__glow {
   position: absolute; inset: 0; pointer-events: none; z-index: 1;
@@ -688,7 +674,6 @@ footer { border-top: 1px solid var(--line); padding: 64px 0 40px; }
 .rv-d1 { transition-delay: 0.1s; } .rv-d2 { transition-delay: 0.2s; } .rv-d3 { transition-delay: 0.3s; }
 @media (prefers-reduced-motion: reduce) {
   .rv { opacity: 1; transform: none; transition: none; }
-  .hero__bg img { animation: none; }
   .day-card:hover, .plan-card:hover, .btn:hover { transform: none; }
 }
 
@@ -768,20 +753,9 @@ footer { border-top: 1px solid var(--line); padding: 64px 0 40px; }
 .tour360__badge { position: absolute; right: 14px; top: 14px; font-size: 10.5px; letter-spacing: 0.04em; color: rgba(244,239,228,0.7); background: rgba(13,31,28,0.6); padding: 6px 12px; border-radius: 999px; max-width: 60%; line-height: 1.4; pointer-events: none; }
 
 /* ============ SCROLL MOTION LAYER ============ */
-/* hero + divider parallax: overflow clip so scaled bg never spills */
-.hero__bg, .act-divider__bg { overflow: hidden; }
-.hero__bg img, .act-divider__bg img { will-change: transform; }
-
-/* A. HERO POINTER PARALLAX — 3D tilt toward cursor (whoa moment) */
-.hero { perspective: 1200px; }
-.hero__bg {
-  transform: rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg));
-  transform-style: preserve-3d;
-  transition: transform 0.08s linear;
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero__bg { transform: none !important; }
-}
+/* divider parallax: overflow clip so scaled bg never spills */
+.act-divider__bg { overflow: hidden; }
+.act-divider__bg img { will-change: transform; }
 
 /* amenity rows: full-width stacked (pinned reel removed to fix leftward drift) */
 
@@ -790,7 +764,7 @@ footer { border-top: 1px solid var(--line); padding: 64px 0 40px; }
 
 /* safety: if user prefers reduced motion, neutralize transforms set by JS */
 @media (prefers-reduced-motion: reduce) {
-  .hero__bg img, .act-divider__bg img, .pillar__thumb, .amenity-row__thumb { transform: none !important; clip-path: none !important; }
+  .act-divider__bg img, .pillar__thumb, .amenity-row__thumb { transform: none !important; clip-path: none !important; }
   .cur-dot { display: none; }
   html { scroll-behavior: auto; }
 }
@@ -798,35 +772,18 @@ footer { border-top: 1px solid var(--line); padding: 64px 0 40px; }
 @media (min-width: 860px) { .tour360 { grid-template-columns: 0.9fr 1.4fr; align-items: center; gap: 48px; } }
 
 /* ============================================================
-   V4 — IMMERSIVE 3D WEBGL LAYER
-   Canvas sits BEHIND all content. By default (no JS / fallback)
-   it is hidden and the V3 photo hero shows through. Once WebGL
-   is confirmed we add `.webgl-on` and fade the photo hero out.
+   V4 — IMMERSIVE 3D WEBGL LAYER (REMOVED)
+   The WebGL background canvas has been removed; the scroll-
+   scrubbed video is now the sole hero. These rules are dead and
+   are kept only as documentation of the original V4 intent.
    ============================================================ */
-#scene3d {
-  position: fixed; inset: 0;
-  width: 100vw; height: 100vh;
-  z-index: 1;                 /* above body bg, below content (content >= 2) */
-  display: none;             /* hidden until WebGL confirmed */
-  opacity: 0;
-  pointer-events: none;
-  background: var(--night-bg);
-  transition: opacity 0.8s var(--ease);
-}
-html.webgl-on #scene3d { display: block; }
+/* #scene3d and html.webgl-on .hero__bg rules removed — canvas deleted. */
 
-/* All page content lives above the canvas; transparent sections reveal it. */
+/* All page content sits above its own backgrounds; transparent sections reveal them. */
 main, footer { position: relative; z-index: 2; }
 
-/* Hero: let the 3D scene show through. The V3 photo stays as the
-   safety backdrop and fades out only once WebGL is confirmed. */
-.hero__bg { z-index: 0; }
-.hero__bg img { opacity: 1; transition: opacity 1.2s var(--ease); }
-html.webgl-on .hero__bg img { opacity: 0; }
-html.webgl-on .hero__bg { background: transparent; }
-
 /* Readability scrims: a soft vignette behind text so copy stays
-   legible against the live 3D scene (no solid block, keeps depth). */
+   legible against the section background images (no solid block). */
 .hero__content, .act-divider__content, .ending__inner { position: relative; z-index: 3; }
 .hero__veil { z-index: 1; }
 
@@ -836,11 +793,8 @@ html.webgl-on .hero__bg { background: transparent; }
 .club::before, .tower-wrap::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: linear-gradient(to bottom, rgba(7,16,14,0.45), rgba(7,16,14,0.55) 50%, rgba(7,16,14,0.45));
-  opacity: 0; transition: opacity 0.6s var(--ease);
+  opacity: 1;
 }
-html.webgl-on .section-pad::before, html.webgl-on .promise::before,
-html.webgl-on .choose::before, html.webgl-on .reality::before,
-html.webgl-on .club::before, html.webgl-on .tower-wrap::before { opacity: 1; }
 .wrap, .pause, .club, .tower-wrap, .home-grid, .reality__grid { position: relative; z-index: 2; }
 
 /* ============================================================
@@ -849,7 +803,7 @@ html.webgl-on .club::before, html.webgl-on .tower-wrap::before { opacity: 1; }
    injected by scrollvideo.js. We add: a brand-coloured scrim for
    text readability, plus typography that reuses the site's tokens
    (display serif + dawn/gold accent). The block lives inside
-   <main> (z-index:2), so it sits above the #scene3d canvas (z:1).
+   <main> (z-index:2), above all page content.
    ============================================================ */
 .scrub { z-index: 2; }
 
@@ -884,6 +838,24 @@ html.webgl-on .club::before, html.webgl-on .tower-wrap::before { opacity: 1; }
   margin-top: clamp(28px, 4vh, 44px);
   font-size: 13px; font-weight: 600; letter-spacing: 0.22em;
   text-transform: uppercase;
+}
+
+/* ============================================================
+   V4 — LOOPING BACKGROUND VIDEO (after hero scrub completes)
+   Sits BEHIND all page content: <main>/<footer> are position:
+   relative; z-index:2, so this fixed z-index:0 layer never
+   covers copy. hero-bg.js drives opacity 0 -> 0.35 -> 0 and
+   play/pause. Sections keep their dark veils so text stays
+   readable over the moving video; no section is fully opaque.
+   ============================================================ */
+.hero-bg-loop {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s ease;
 }
 
 /* If WebGL is confirmed, let the 3D canvas stay as a faint ambient

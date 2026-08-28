@@ -15,16 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="elena-assets/elena.css">
-<link rel="preload" as="image" href="elena-assets/original/photo-towers.jpg">
-<!-- Three.js r160 (WebGL 3D immersive layer) via CDN importmap -->
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-  }
-}
-</script>
+<link rel="preload" as="image" href="elena-assets/scrub.mp4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,8 +38,6 @@
 </script>
 </head>
 <body data-time="dawn">
-<!-- ============ IMMERSIVE 3D WEBGL CANVAS (behind all content) ============ -->
-<canvas id="scene3d" aria-hidden="true"></canvas>
 <a class="skip" href="#main" style="position:absolute;left:-9999px;top:0;z-index:200;background:#0d1f1c;color:#f4efe4;padding:12px 20px;border-radius:0 0 12px 0;">Skip to content</a>
 <div class="grain" aria-hidden="true"></div>
 
@@ -148,20 +137,21 @@
 
 <main id="main">
 
-  <!-- ============ SCROLL-SCRUBBED VIDEO HERO (replaces 3D as the visible hero) ============ -->
-  <!-- The #scene3d canvas stays behind everything (z-index:1) as an ambient fallback. -->
+  <!-- ============ SCROLL-SCRUBBED VIDEO HERO (sole hero) ============ -->
   <div class="scrub" data-src="elena-assets/scrub.mp4" data-spacer="500" data-ease="0.12" aria-label="Elena Residences film">
     <div class="scrub__overlay">
       <p class="scrub__eyebrow eyebrow">Lansum Elena Residences · Kokapet, Hyderabad</p>
       <h1 class="scrub__title">A residence that <em>flies you in</em> before you arrive.</h1>
       <p class="scrub__sub">An immersive scroll that takes you through the tower before you step inside — two slender glass homes beside Kokapet Lake, designed around the pause.</p>
       <a class="btn btn--solid scrub__cta" href="#enquiryCta">Book a viewing</a>
-    </div>
-  </div>
+      </div>
+      </div>
 
-  <!-- ============ ACT I · ARRIVAL (dawn) ============ -->
+      <!-- ============ LOOPING BACKGROUND VIDEO (fades in after hero scrub) ============ -->
+      <video class="hero-bg-loop" muted loop playsinline preload="auto" aria-hidden="true" src="elena-assets/bg-loop.mp4"></video>
+
+      <!-- ============ ACT I · ARRIVAL (dawn) ============ -->
   <section class="hero act" id="arrival" data-time="dawn" aria-label="Arrival">
-    <div class="hero__bg"><img src="elena-assets/original/photo-towers.jpg" alt="The two towers of Elena at twilight, reflected beside the water" fetchpriority="high"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="hero__veil" aria-hidden="true"></div>
     <div class="hero__content">
@@ -883,9 +873,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="elena-assets/motion.js"></script>
-<!-- ============ IMMERSIVE 3D WEBGL LAYER (ambient fallback behind the video hero) ============ -->
-<script type="module" src="elena-assets/scene3d.js"></script>
 <!-- ============ SCROLL-SCRUBBED VIDEO HERO ============ -->
 <script src="elena-assets/scrollvideo.js" defer></script>
+<!-- ============ LOOPING BACKGROUND VIDEO (after hero scrub) ============ -->
+<script src="elena-assets/hero-bg.js" defer></script>
 </body>
 </html>

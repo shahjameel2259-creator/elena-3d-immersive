@@ -111,35 +111,7 @@
       })();
     }
 
-    // ---------- 8. HERO POINTER PARALLAX + GLOW (pushed "whoa" moment) ----------
-    var heroBgWrap = document.querySelector(".hero__bg");
-    var heroGlow = document.querySelector(".hero__glow");
-    var heroImgEl = document.querySelector(".hero__bg img");
-    if (heroBgWrap && !reduce && window.matchMedia("(pointer: fine)").matches) {
-      var hx = 0, hy = 0, chx = 0, chy = 0;
-      window.addEventListener("mousemove", function (e) {
-        var r = heroBgWrap.getBoundingClientRect();
-        hx = ((e.clientX - r.left) / r.width - 0.5) * 2;    // -1..1
-        hy = ((e.clientY - r.top) / r.height - 0.5) * 2;
-        if (heroGlow) {
-          heroGlow.style.setProperty("--mx", (((e.clientX - r.left) / r.width) * 100).toFixed(1) + "%");
-          heroGlow.style.setProperty("--my", (((e.clientY - r.top) / r.height) * 100).toFixed(1) + "%");
-        }
-      });
-      (function tilt() {
-        chx += (hx - chx) * 0.06; chy += (hy - chy) * 0.06;
-        // deeper tilt
-        heroBgWrap.style.setProperty("--tiltY", (chx * 7).toFixed(2) + "deg");
-        heroBgWrap.style.setProperty("--tiltX", (-chy * 5).toFixed(2) + "deg");
-        // image depth parallax (opposite direction) for real 3D
-        if (heroImgEl) {
-          heroImgEl.style.transform = "scale(1.12) translate(" + (-chx * 18).toFixed(1) + "px," + (-chy * 14).toFixed(1) + "px)";
-        }
-        requestAnimationFrame(tilt);
-      })();
-    }
 
-    // ---------- 9. COUNT-UP STATS (anchors scale & prestige) ----------
     gsap.utils.toArray(".stat__num[data-count]").forEach(function (el) {
       var end = parseFloat(el.getAttribute("data-count"));
       var dec = parseInt(el.getAttribute("data-decimals") || "0", 10);
