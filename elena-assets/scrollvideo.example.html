@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>scroll-video — example</title>
+<style>
+  body{margin:0;font-family:system-ui,sans-serif;background:#141018;color:#F1EBE6}
+
+  /* style the overlay however you like — the component only positions it */
+  .scrub__overlay{
+    max-width:76rem;margin:0 auto;
+  }
+  .scrub__overlay h1{
+    font-size:clamp(2.5rem,9vw,7rem);line-height:1.05;margin:0 0 1rem;font-weight:500;
+  }
+  .scrub__overlay p{font-size:clamp(1rem,2.5vw,1.4rem);max-width:40ch;opacity:.85;margin:0 0 2rem}
+  .scrub__overlay a{
+    display:inline-flex;align-items:center;min-height:52px;padding:0 1.7rem;
+    background:#F1EBE6;color:#141018;text-decoration:none;border-radius:999px;
+    text-transform:uppercase;letter-spacing:.06em;font-size:.9rem;
+  }
+  /* dark gradient so text stays readable over the video */
+  .scrub__pin::after{
+    content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(10,7,14,.5),transparent 30%,transparent 55%,rgba(10,7,14,.7));
+  }
+
+  .after{padding:12vh 6vw;max-width:60rem;margin:0 auto}
+  .after h2{font-size:clamp(1.8rem,5vw,3rem)}
+</style>
+</head>
+<body>
+
+  <div class="scrub" data-src="scrub.mp4" data-spacer="500">
+    <div class="scrub__overlay">
+      <h1>Pause more.<br>Live more.</h1>
+      <p>An immersive scroll that flies you through the tower before you step inside.</p>
+      <a href="#more">Book a viewing</a>
+    </div>
+  </div>
+
+  <section class="after" id="more">
+    <h2>Your normal page content flows here.</h2>
+    <p>The component is just the <code>.scrub</code> block above plus <code>scroll-video.js</code>. Everything below is yours.</p>
+  </section>
+
+  <script src="scroll-video.js" defer></script>
+</body>
+</html>

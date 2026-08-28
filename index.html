@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="elena-assets/original/logo-color.webp">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lansum Elena Residences | 3 &amp; 4 BHK Luxury Apartments in Kokapet, Hyderabad</title>
+<meta name="description" content="Lansum Elena Residences: two towers beside Kokapet Lake, Hyderabad. 540 homes across 3 and 4 BHK configurations, designed around the pause. 2 minutes from ORR Exit 1, 5 minutes from the Financial District. RERA P02400007478.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lansum Elena Residences | A Digital Day at Home">
+<meta property="og:description" content="Two towers beside Kokapet Lake, designed around the pause. 3 and 4 BHK residences in the heart of Hyderabad, away from its noise.">
+<meta property="og:image" content="elena-assets/original/photo-towers.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="elena-assets/elena.css">
+<link rel="preload" as="image" href="elena-assets/original/photo-towers.jpg">
+<!-- Three.js r160 (WebGL 3D immersive layer) via CDN importmap -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateListing",
+  "name": "Lansum Elena Residences",
+  "description": "Luxury residential towers beside Kokapet Lake, Hyderabad. 3 and 4 BHK residences designed around the pause and slow living.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Golden Mile Extension Road, Kokapet, near Nehru Outer Ring Road, Exit 1",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500075",
+    "addressCountry": "IN"
+  },
+  "identifier": "P02400007478",
+  "numberOfBedrooms": 4,
+  "floorSize": { "@type": "QuantitativeValue", "unitCode": "MTK", "value": 0 },
+  "offers": { "@type": "Offer", "price": 0, "priceCurrency": "INR" }
+}
+</script>
+</head>
+<body data-time="dawn">
+<!-- ============ IMMERSIVE 3D WEBGL CANVAS (behind all content) ============ -->
+<canvas id="scene3d" aria-hidden="true"></canvas>
+<a class="skip" href="#main" style="position:absolute;left:-9999px;top:0;z-index:200;background:#0d1f1c;color:#f4efe4;padding:12px 20px;border-radius:0 0 12px 0;">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ STICKY ENQUIRY CTA ============ -->
+<div class="enquiry-cta" id="enquiryCta" role="region" aria-label="Enquire">
+  <div class="enquiry-cta__inner">
+    <span class="enquiry-cta__pitch">Begin your day at Elena</span>
+    <div class="enquiry-cta__actions">
+      <a class="btn btn--solid btn--sm" id="enquiryMail" href="#">Enquire</a>
+      <a class="enquiry-cta__link" href="tel:+914069693333" aria-label="Call Elena Residences">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 40 6969 3333
+      </a>
+      <a class="enquiry-cta__link" href="https://wa.me/918575575576" target="_blank" rel="noopener" aria-label="WhatsApp Elena Residences">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.8c2.16 0 4.18.84 5.71 2.37a8.03 8.03 0 0 1 2.37 5.71c0 4.46-3.63 8.09-8.1 8.09-1.62 0-3.2-.48-4.55-1.38l-.33-.21-3.11.82.83-3.04-.21-.34a8.05 8.05 0 0 1-1.39-4.49c0-4.47 3.63-8.11 8.1-8.11zm-2.2 3.05c-.18 0-.46.07-.7.34-.24.27-.92.9-.92 2.18 0 1.28.94 2.37 1.07 2.54.13.17 1.83 2.79 4.43 3.92.62.27 1.1.43 1.47.55.62.2 1.18.17 1.63.1.5-.07 1.53-.62 1.74-1.23.21-.6.21-1.12.15-1.23-.06-.1-.22-.17-.46-.29-.24-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.57.12-.17.24-.65.81-.8.98-.14.17-.29.19-.54.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.01-.37.11-.49.12-.12.27-.3.4-.45.14-.15.18-.26.28-.43.09-.17.05-.32-.02-.45-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.43-.57-.44-.15-.01-.32-.01-.49-.01z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DISCLAIMER GATE ============ -->
+<div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
+  <div class="disclaimer__card">
+    <h2 id="disclaimerTitle">A note before you begin</h2>
+    <p>All information, visuals and descriptions on this website are illustrative, subject to change, and may differ from actual conditions. Nothing here constitutes a legal offer, promise or commitment. Project details, approvals and specifications should be independently verified with official RERA records and sanctioned documents.</p>
+    <p class="rera">TG-RERA P02400007478 &nbsp;·&nbsp; rera.telangana.gov.in</p>
+    <div class="disclaimer__actions">
+      <button class="btn btn--solid" id="disclaimerAccept" type="button">Accept &amp; continue</button>
+      <a class="btn btn--ghost" href="https://www.elenaresidences.com/" target="_blank" rel="noopener">Full disclaimer</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#arrival" aria-label="Elena Residences home">
+      <img class="brand__logo brand__logo--white" src="elena-assets/original/logo-white.webp" alt="Elena" width="132" height="64">
+      <img class="brand__logo brand__logo--color" src="elena-assets/original/logo-color.webp" alt="Elena" width="132" height="64">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="#pauseAct">Explore</a>
+      <a class="nav__link" href="#homeAct">Residences</a>
+      <a class="nav__link" href="#plans">Pricing</a>
+      <a class="nav__link" href="#worldAct">Visit</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__link" type="button" data-open-facts>The facts</button>
+      <a class="nav__phone" href="tel:+914069693333">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 40 6969 3333
+      </a>
+      <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile sheet -->
+<div class="nav-sheet" id="navSheet" aria-hidden="true">
+  <a href="#pauseAct">The Pause</a>
+  <a href="#homeAct">The Home</a>
+  <a href="#plans">Pricing</a>
+  <a href="#worldAct">The World</a>
+  <a href="#" data-open-facts>The Facts</a>
+  <a href="tel:+914069693333">+91 40 6969 3333</a>
+</div>
+
+<!-- ============ FACTS DRAWER ============ -->
+<div class="facts__scrim" id="factsScrim" aria-hidden="true"></div>
+<aside class="facts" id="factsDrawer" role="dialog" aria-modal="true" aria-labelledby="factsTitle" aria-hidden="true">
+  <div class="facts__head">
+    <h3 id="factsTitle">The facts</h3>
+    <button class="facts__close" type="button" data-close-facts aria-label="Close facts">Close</button>
+  </div>
+  <div class="facts__body">
+    <div class="fact-row"><span>Developer</span><b>Lansum Enpoint Developers LLP<br>LLPIN AAN-3074</b></div>
+    <div class="fact-row"><span>RERA</span><b>TG-RERA P02400007478<br>rera.telangana.gov.in</b></div>
+    <div class="fact-row"><span>Location</span><b>Golden Mile Extension Road, Kokapet, near Nehru Outer Ring Road, Exit 1, Hyderabad, Telangana 500075</b></div>
+    <div class="fact-row"><span>Land area</span><b>3.6 acres</b></div>
+    <div class="fact-row"><span>Towers</span><b>2 towers · 55 floors</b></div>
+    <div class="fact-row"><span>Homes</span><b>540 residences</b></div>
+    <div class="fact-row"><span>Configurations</span><b>3, 3.5 and 4 BHK</b></div>
+    <div class="fact-row"><span>Clubhouse</span><b>50,000 sq ft</b></div>
+    <div class="fact-row"><span>Possession</span><b>[Confirm with the sales team]</b></div>
+    <div class="fact-row"><span>Pricing</span><b>Starting at ₹11,000 per sq ft<br>Share the full price list on request</b></div>
+    <div class="fact-row"><span>Payment plans</span><b>Down Payment Plan · Milestone Payment Plan</b></div>
+    <div class="fact-row"><span>Approvals</span><b>[As per sanctioned documents. Verify with RERA records]</b></div>
+  </div>
+  <div class="facts__cta">
+    <button class="btn btn--solid" type="button" id="factsToCreate">Create my Elena</button>
+    <a class="btn btn--ghost" href="tel:+914069693333">Call +91 40 6969 3333</a>
+  </div>
+</aside>
+
+<main id="main">
+
+  <!-- ============ SCROLL-SCRUBBED VIDEO HERO (replaces 3D as the visible hero) ============ -->
+  <!-- The #scene3d canvas stays behind everything (z-index:1) as an ambient fallback. -->
+  <div class="scrub" data-src="elena-assets/scrub.mp4" data-spacer="500" data-ease="0.12" aria-label="Elena Residences film">
+    <div class="scrub__overlay">
+      <p class="scrub__eyebrow eyebrow">Lansum Elena Residences · Kokapet, Hyderabad</p>
+      <h1 class="scrub__title">A residence that <em>flies you in</em> before you arrive.</h1>
+      <p class="scrub__sub">An immersive scroll that takes you through the tower before you step inside — two slender glass homes beside Kokapet Lake, designed around the pause.</p>
+      <a class="btn btn--solid scrub__cta" href="#enquiryCta">Book a viewing</a>
+    </div>
+  </div>
+
+  <!-- ============ ACT I · ARRIVAL (dawn) ============ -->
+  <section class="hero act" id="arrival" data-time="dawn" aria-label="Arrival">
+    <div class="hero__bg"><img src="elena-assets/original/photo-towers.jpg" alt="The two towers of Elena at twilight, reflected beside the water" fetchpriority="high"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow eyebrow rv">Lansum Elena Residences · Kokapet, Hyderabad</p>
+      <h1 class="rv rv-d1">What if home gave you <em>time back</em>?</h1>
+      <p class="hero__sub rv rv-d2">Two towers beside Kokapet Lake, designed around the pause. 3 and 4 BHK residences in the heart of Hyderabad, away from its noise.</p>
+      <div class="hero__cta rv rv-d3">
+        <a class="btn btn--solid" href="#promise">Begin your day</a>
+        <button class="btn btn--ghost" type="button" data-open-facts>The facts</button>
+      </div>
+      <div class="hero__stats rv rv-d3">
+        <div class="stat"><div class="stat__num" data-count="2" data-decimals="0">0</div><div class="stat__label">Towers</div></div>
+        <div class="stat"><div class="stat__num" data-count="55" data-decimals="0">0</div><div class="stat__label">Floors</div></div>
+        <div class="stat"><div class="stat__num" data-count="540" data-decimals="0">0</div><div class="stat__label">Homes</div></div>
+        <div class="stat"><div class="stat__num" data-count="3.6" data-decimals="1">0</div><div class="stat__label">Land (ac)</div></div>
+        <div class="stat"><div class="stat__num" data-count="0" data-decimals="0" data-suffix="min">0</div><div class="stat__label">To Kokapet Lake</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE PROMISE (dawn) ============ -->
+  <section class="promise section-pad act" id="promise" data-time="dawn">
+    <div class="wrap">
+      <p class="eyebrow rv">The Promise of Elena</p>
+      <blockquote class="promise__quote rv rv-d1">In the heart of Hyderabad, but away from its hustle, lies Elena. Two towers built on a simple truth: it is possible to stay connected with yourself, and all the things you love, in a world of clutter and chaos.</blockquote>
+      <p class="lede promise__body rv rv-d2">The pause is not an escape. It is a return. Every inch of Elena, every nook and corner, is designed to celebrate it. Meditation rooms, quiet reading nooks, lotus ponds, butterfly gardens. A home that asks you to slow down, and gives you the space to.</p>
+    </div>
+  </section>
+
+  <!-- ============ ACT II · THE PAUSE (day) ============ -->
+  <section class="act-divider act" id="pauseAct" data-time="day" aria-label="The Pause">
+    <div class="act-divider__bg"><img src="elena-assets/original/photo-nature.jpg" alt="The tropical gardens of Elena, a morning pause" loading="lazy"></div>
+    <div class="act-divider__veil" aria-hidden="true"></div>
+    <div class="act-divider__content">
+      <p class="act-divider__time rv">Morning</p>
+      <h2 class="rv rv-d1">The Pause</h2>
+      <p class="act-divider__note rv rv-d2">Nature · Water · Mind</p>
+    </div>
+  </section>
+
+  <section class="section-pad" data-time="day">
+    <div class="wrap">
+      <div class="pause">
+        <div class="pause__media rv">
+          <img src="elena-assets/original/photo-pond.jpg" alt="A lotus pond at Elena, still and quiet" loading="lazy">
+        </div>
+        <div class="pause__copy">
+          <p class="eyebrow rv">Slow living, by design</p>
+          <h2 class="display rv rv-d1" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">Highlights of the Elena life</h2>
+          <p class="lede rv rv-d2" style="margin-top:20px;">The pause is a lifestyle philosophy. It is about savouring each moment, being fully present, having meaningful conversations, and finding joy in simple pleasures. Elena was built to make all of that easy.</p>
+          <div class="pillars">
+            <div class="pillar rv"><img class="pillar__thumb" src="elena-assets/original/cine-lotus.webp" alt="A quiet meditation corner" loading="lazy"><h3>For the calmer mind</h3><p>Meditation rooms, quiet reading nooks and mindfulness spaces. Indoor plants and a calming palette throughout.</p></div>
+            <div class="pillar rv rv-d1"><img class="pillar__thumb" src="elena-assets/original/cine-fitness.webp" alt="The open-air fitness deck" loading="lazy"><h3>For the fitter body</h3><p>Walking, cycling, swimming, squash, basketball, yoga. Nothing is missing here.</p></div>
+            <div class="pillar rv"><img class="pillar__thumb" src="elena-assets/original/cine-community.webp" alt="Communal spaces at Elena" loading="lazy"><h3>For the youthful spirit</h3><p>Spaces for contemplation and prayer, cookouts with neighbours, art installations, lotus ponds and butterfly gardens.</p></div>
+            <div class="pillar rv rv-d1"><img class="pillar__thumb" src="elena-assets/original/cine-garden.webp" alt="Families among the gardens" loading="lazy"><h3>For the happier family</h3><p>Plenty for the young, plenty for the elderly. Social activities and communal spaces that make Elena one big family.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHOOSE YOUR DAY (day) ============ -->
+  <section class="choose section-pad act" id="chooseDay" data-time="day">
+    <div class="wrap">
+      <p class="eyebrow rv">A day at Elena is yours to design</p>
+      <h2 class="display rv rv-d1">How would you spend your day?</h2>
+      <p class="lede rv rv-d2">Choose a rhythm. Elena will remember it, and shape the rest of your visit around it.</p>
+      <div class="day-grid">
+        <button class="day-card rv" type="button" data-day="slow" aria-label="Slow: nature, reading, meditation">
+          <span class="day-card__icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 9-9 1 5-1 8-4 10"/><path d="M11 20c3-1 6-4 7-9 2-1 4-1 5 0-1 6-6 10-12 9z"/></svg>
+          </span>
+          <h3>SLOW</h3>
+          <p>Nature, reading, meditation. Gardens and quiet corners, lotus ponds and long mornings.</p>
+          <span class="day-card__hint">Begin the pause</span>
+        </button>
+        <button class="day-card rv rv-d1" type="button" data-day="alive" aria-label="Alive: fitness, pool, sport">
+          <span class="day-card__icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg>
+          </span>
+          <h3>ALIVE</h3>
+          <p>Fitness, pool, sport. Swim laps at sunrise, squash before dinner, yoga on the deck.</p>
+          <span class="day-card__hint">Begin the life</span>
+        </button>
+        <button class="day-card rv rv-d2" type="button" data-day="together" aria-label="Together: club, community, dining">
+          <span class="day-card__icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M3.5 20c.6-3.4 2.8-5.2 5.5-5.2s4.9 1.8 5.5 5.2"/><circle cx="17" cy="9" r="2.6"/><path d="M15.8 14.6c2.2.3 3.9 1.9 4.4 4.4"/></svg>
+          </span>
+          <h3>TOGETHER</h3>
+          <p>Club, community, dining. A 50,000 sq ft clubhouse where evenings become occasions.</p>
+          <span class="day-card__hint">Join the club</span>
+        </button>
+        <button class="day-card rv rv-d3" type="button" data-day="home" aria-label="Home: interiors, balcony, family">
+          <span class="day-card__icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg>
+          </span>
+          <h3>HOME</h3>
+          <p>Interiors, balcony, family. Open light-filled rooms and a view that belongs to you.</p>
+          <span class="day-card__hint">Enter the home</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACT III · THE LIFE (day) ============ -->
+  <section class="act-divider act" id="lifeAct" data-time="day" aria-label="The Life">
+    <div class="act-divider__bg"><img src="elena-assets/original/photo-poolsky.jpg" alt="The infinity pool at Elena as the day warms" loading="lazy"></div>
+    <div class="act-divider__veil" aria-hidden="true"></div>
+    <div class="act-divider__content">
+      <p class="act-divider__time rv">Day</p>
+      <h2 class="rv rv-d1">The Life</h2>
+      <p class="act-divider__note rv rv-d2">Move · Play · Connect</p>
+    </div>
+  </section>
+
+  <section class="section-pad act" data-time="day">
+    <div class="wrap">
+      <div class="life-head">
+        <h2 class="display rv">When it comes to a mindful, soulful life, nothing has been left out</h2>
+        <p class="lede rv rv-d1">Amenities for the calmer mind, the fitter body, the youthful spirit and the happier family. Arranged across 3.6 acres beside the lake.</p>
+      </div>
+      <div class="amenity-list">
+        <div class="amenity-row rv">
+          <div class="amenity-row__gallery" aria-hidden="true">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-garden.webp" alt="Tropical groves at Elena" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-lotus.webp" alt="Lotus pond and gardens" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-hero-lake.jpg" alt="Sensory gardens beside the lake" loading="lazy">
+          </div><span class="amenity-row__index">01</span>
+          <div>
+            <h3>Nature &amp; Wellness</h3>
+            <p>Let nature speak to you in lush tropical groves, fragrant sensory gardens and walking trails.</p>
+            <div class="amenity-row__tags"><span class="tag">Sensory gardens</span><span class="tag">Walking trails</span><span class="tag">Tropical groves</span></div>
+          </div>
+        </div>
+        <div class="amenity-row rv">
+          <div class="amenity-row__gallery" aria-hidden="true">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-community.webp" alt="Communal celebration spaces" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-grill.webp" alt="Outdoor grill and lounge" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-recreation.webp" alt="Open-air amphitheatre lawns" loading="lazy">
+          </div><span class="amenity-row__index">02</span>
+          <div>
+            <h3>Celebrating Community</h3>
+            <p>Picnic spots, communal spaces and an open-air amphitheatre made for celebrations and shared memories.</p>
+            <div class="amenity-row__tags"><span class="tag">Amphitheatre</span><span class="tag">Picnic lawns</span></div>
+          </div>
+        </div>
+        <div class="amenity-row rv">
+          <div class="amenity-row__gallery" aria-hidden="true">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-recreation.webp" alt="Multi-purpose courts" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-fitness.webp" alt="Open-air fitness deck" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-garden.webp" alt="Nature-inspired children's areas" loading="lazy">
+          </div><span class="amenity-row__index">03</span>
+          <div>
+            <h3>Recreation for All</h3>
+            <p>Vibrant playgrounds, multi-purpose courts and nature-inspired children's areas. Unwind, play, connect.</p>
+            <div class="amenity-row__tags"><span class="tag">Playgrounds</span><span class="tag">Multi-purpose courts</span></div>
+          </div>
+        </div>
+        <div class="amenity-row rv">
+          <div class="amenity-row__gallery" aria-hidden="true">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-yoga.webp" alt="Open-air yoga deck" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-pool.webp" alt="Invigorating pool" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-lotus.webp" alt="Calming meditation zone" loading="lazy">
+          </div><span class="amenity-row__index">04</span>
+          <div>
+            <h3>Mind, Body, Spirit</h3>
+            <p>Open-air yoga decks, energising fitness areas, invigorating pools and calming meditation zones.</p>
+            <div class="amenity-row__tags"><span class="tag">Yoga decks</span><span class="tag">Pools</span><span class="tag">Meditation zones</span></div>
+          </div>
+        </div>
+        <div class="amenity-row rv">
+          <div class="amenity-row__gallery" aria-hidden="true">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-stargaze.webp" alt="Stargazing deck" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-garden.webp" alt="Green meditative space" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-hero-tower.jpg" alt="Quiet reading nook with a view" loading="lazy">
+          </div><span class="amenity-row__index">05</span>
+          <div>
+            <h3>Mindful Retreats</h3>
+            <p>Quiet reading nooks, green meditative spaces and stargazing heights where tranquility catches you unawares.</p>
+            <div class="amenity-row__tags"><span class="tag">Reading nooks</span><span class="tag">Stargazing deck</span></div>
+          </div>
+        </div>
+        <div class="amenity-row rv">
+          <div class="amenity-row__gallery" aria-hidden="true">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-pool.webp" alt="Bubbling pools" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-lotus.webp" alt="Lotus pond" loading="lazy">
+            <img class="amenity-row__thumb" src="elena-assets/original/cine-hero-lake.jpg" alt="Water decks overlooking the lake" loading="lazy">
+          </div><span class="amenity-row__index">06</span>
+          <div>
+            <h3>Restorative Waters</h3>
+            <p>Bubbling pools, lotus ponds and seating decks overlooking calming waterscapes.</p>
+            <div class="amenity-row__tags"><span class="tag">Lotus ponds</span><span class="tag">Water decks</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE CLUB (day) ============ -->
+  <section class="section-pad act" id="clubAct" data-time="day">
+    <div class="wrap">
+      <div class="club">
+        <div class="club__media rv">
+          <img src="elena-assets/original/photo-gym.jpg" alt="Open-air rooftop fitness deck at Elena" loading="lazy">
+          <img class="club__media--alt" src="elena-assets/original/photo-grill.jpg" alt="Outdoor grill and lounge at the Elena clubhouse" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow rv">Join the Club</p>
+          <h2 class="display rv rv-d1" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">No one's an island</h2>
+          <p class="lede rv rv-d2" style="margin-top:20px;">What do you do when you have had your fill of me-time? Get some we-time. A fully loaded 50,000 sq ft clubhouse, where the action ranges from swimming and exercising to playing, dancing, singing and partying.</p>
+          <div class="club__zones">
+            <div class="club__zone rv"><strong>Fitness &amp; Wellness</strong><span>State-of-the-art gym, group workout studio with Zumba to yoga, dedicated Pilates studio.</span></div>
+            <div class="club__zone rv"><strong>Get together</strong><span>Banquet halls, a vibrant youth party hall, and guest rooms for visiting out-of-towners.</span></div>
+            <div class="club__zone rv"><strong>Relaxation &amp; Revival</strong><span>Indoor temperature-controlled pool, terrace pool, wellness space, jacuzzi and sauna.</span></div>
+            <div class="club__zone rv"><strong>Inspiration &amp; Focus</strong><span>Library, co-working space, media creation studio, music room, recording studio, karaoke and retro arcade.</span></div>
+            <div class="club__zone rv"><strong>Competition &amp; Camaraderie</strong><span>Indoor squash and badminton courts, table tennis, pool and air hockey in the games room.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOWER EXPLORER (day) ============ -->
+  <section class="section-pad act" data-time="day" aria-label="Explore the towers">
+    <div class="wrap">
+      <div class="tower-wrap">
+        <div class="tower-fig rv" role="img" aria-label="Elevation of the two Elena towers, 55 floors, with amenity zones highlighted">
+          <svg viewBox="0 0 520 560" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- ground -->
+            <line x1="40" y1="520" x2="480" y2="520" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5"/>
+            <text x="40" y="540" fill="currentColor" fill-opacity="0.45" font-size="11" letter-spacing="3" font-family="Outfit, sans-serif">GROUND</text>
+            <!-- left tower -->
+            <rect x="80" y="60" width="150" height="460" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2"/>
+            <rect x="80" y="60" width="150" height="460" fill="url(#glassL)" opacity="0.5"/>
+            <!-- right tower -->
+            <rect x="290" y="30" width="150" height="490" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.2"/>
+            <rect x="290" y="30" width="150" height="490" fill="url(#glassR)" opacity="0.5"/>
+            <defs>
+              <pattern id="glassL" width="12" height="16" patternUnits="userSpaceOnUse">
+                <rect width="12" height="16" fill="none"/><rect x="0" y="0" width="5" height="10" fill="currentColor" fill-opacity="0.12"/>
+              </pattern>
+              <pattern id="glassR" width="12" height="16" patternUnits="userSpaceOnUse">
+                <rect width="12" height="16" fill="none"/><rect x="0" y="0" width="5" height="10" fill="currentColor" fill-opacity="0.12"/>
+              </pattern>
+            </defs>
+            <!-- amenity zones: podium, wellness, sky garden, crown -->
+            <g class="tower-zone">
+              <rect x="290" y="470" width="150" height="50" fill="#dfb77e" fill-opacity="0.4"/>
+              <text x="470" y="498" fill="#dfb77e" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif">THE CLUB</text>
+              <text x="470" y="512" fill="currentColor" fill-opacity="0.5" font-size="10" font-family="Outfit, sans-serif">Podium · 50,000 sq ft</text>
+            </g>
+            <g class="tower-zone">
+              <rect x="80" y="380" width="150" height="46" fill="#7fb3a8" fill-opacity="0.32"/>
+              <text x="40" y="405" fill="#9dc4ba" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif">WELLNESS</text>
+              <text x="40" y="419" fill="currentColor" fill-opacity="0.5" font-size="10" font-family="Outfit, sans-serif">Yoga · Meditation</text>
+            </g>
+            <g class="tower-zone">
+              <rect x="290" y="250" width="150" height="34" fill="#dfb77e" fill-opacity="0.3"/>
+              <text x="470" y="270" fill="#dfb77e" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif">SKY GARDEN</text>
+            </g>
+            <g class="tower-zone">
+              <rect x="80" y="60" width="150" height="26" fill="#7fb3a8" fill-opacity="0.32"/>
+              <text x="40" y="78" fill="#9dc4ba" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif">STARGAZING DECK</text>
+            </g>
+            <!-- floor scale -->
+            <line x1="252" y1="60" x2="252" y2="520" stroke="currentColor" stroke-opacity="0.18" stroke-width="1"/>
+            <text x="256" y="70" fill="currentColor" fill-opacity="0.5" font-size="10" font-family="Outfit, sans-serif">55F</text>
+            <text x="256" y="520" fill="currentColor" fill-opacity="0.5" font-size="10" font-family="Outfit, sans-serif">1F</text>
+          </svg>
+          <div class="tower-legend">
+            <div><i style="background:#dfb77e"></i> Club, sky garden, warm light</div>
+            <div><i style="background:#7fb3a8"></i> Wellness, meditation, water</div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow rv">Two towers, one idea</p>
+          <h2 class="display rv rv-d1" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">55 floors of pause</h2>
+          <p class="lede rv rv-d2" style="margin-top:20px;">From the clubhouse podium to the stargazing deck, every level of Elena is composed around rest, water and light. 540 homes, each with a view of the lake, the gardens or the city.</p>
+          <div class="tower-cta rv">
+            <button class="btn btn--ghost" type="button" data-open-facts>The facts</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACT IV · THE HOME (golden hour) ============ -->
+  <section class="act-divider act" id="homeAct" data-time="gold" aria-label="The Home">
+    <div class="act-divider__bg"><img src="elena-assets/original/photo-living.jpg" alt="A living room at Elena bathed in daylight" loading="lazy"></div>
+    <div class="act-divider__veil" aria-hidden="true"></div>
+    <div class="act-divider__content">
+      <p class="act-divider__time rv">Golden hour</p>
+      <h2 class="rv rv-d1">The Home</h2>
+      <p class="act-divider__note rv rv-d2">Interior · Balcony · Floor plan</p>
+    </div>
+  </section>
+
+  <section class="section-pad act" data-time="gold">
+    <div class="wrap">
+      <div class="home-grid">
+        <div>
+          <div class="room-stage rv">
+            <img src="elena-assets/original/room-living.avif" alt="Living room render at Elena" class="active" id="stageImg">
+            <div class="room-stage__cap">
+              <strong id="roomCap">Living room</strong>
+              <span id="viewCap">Choose your view</span>
+            </div>
+          </div>
+          <div class="room-tabs rv" role="tablist" aria-label="Rooms at Elena">
+            <button class="room-tab active" type="button" data-room="living" role="tab" aria-selected="true">Living</button>
+            <button class="room-tab" type="button" data-room="drawing" role="tab" aria-selected="false">Drawing</button>
+            <button class="room-tab" type="button" data-room="dining" role="tab" aria-selected="false">Dining</button>
+            <button class="room-tab" type="button" data-room="bedroom" role="tab" aria-selected="false">Bedroom</button>
+            <button class="room-tab" type="button" data-room="kitchen" role="tab" aria-selected="false">Kitchen</button>
+            <button class="room-tab" type="button" data-room="sitout" role="tab" aria-selected="false">Sit out</button>
+          </div>
+          <p class="small rv" style="margin-top:14px;">Illustrative renders. Final interiors as per the sanctioned specifications.</p>
+        </div>
+        <div class="rv rv-d1">
+          <p class="eyebrow">Pause and explore your home</p>
+          <h2 class="display" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">Space to be yourself</h2>
+          <p class="lede" style="margin-top:20px;">Warm and cosy inside, with spaces designed for maximum rest and relaxation. An oasis of calm, minimalist decor, and an abundance of natural light.</p>
+          <div class="view-panel" id="viewPanel" style="margin-top:34px;">
+            <h3>Your morning begins here</h3>
+            <p>Choose the view your day wakes up to.</p>
+            <div class="view-opts">
+              <button class="view-opt active" type="button" data-view="lake">
+                <img src="elena-assets/original/photo-pond.jpg" alt="Kokapet Lake and the lotus pond, golden hours" loading="lazy">
+                <span>Lake<small>Kokapet Lake, golden hours</small></span>
+              </button>
+              <button class="view-opt" type="button" data-view="city">
+                <img src="elena-assets/original/cine-stargaze.webp" alt="Birds and sky over the water at dusk" loading="lazy">
+                <span>Sky<small>Birds over the water at dusk</small></span>
+              </button>
+              <button class="view-opt" type="button" data-view="garden">
+                <img src="elena-assets/original/photo-nature.jpg" alt="The tropical groves of Elena" loading="lazy">
+                <span>Garden<small>Tropical groves and lotus ponds</small></span>
+              </button>
+            </div>
+            <div class="save-zone">
+              <button class="btn btn--solid btn--sm" id="saveElena" type="button">Save this space</button>
+              <span class="save-note">Builds your personal My Elena collection</span>
+            </div>
+            <div class="my-elena" id="myElena">
+              <h4>My Elena</h4>
+              <ul id="myElenaList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 360° WALKTHROUGH (gold) ============ -->
+  <section class="section-pad act" id="tour360" data-time="gold" aria-label="360 degree walkthrough">
+    <div class="wrap">
+      <div class="tour360">
+        <div class="tour360__head rv">
+          <p class="eyebrow">Walk through it</p>
+          <h2 class="display" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">Step inside. Look around.</h2>
+          <p class="lede" style="margin-top:20px;">Drag to look in every direction. This is your home at Elena — the light, the view, the pause — before you ever visit.</p>
+        </div>
+        <div class="tour360__stage rv rv-d1">
+          <div id="pano" class="tour360__pano" role="img" aria-label="360 degree view of an Elena residence"></div>
+          <div class="tour360__hint">Drag to look around</div>
+          <span class="tour360__badge">Live preview · interactive drag demo. Drop a V-Ray equirectangular render to make it production-ready.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REALITY LAYER (gold) ============ -->
+  <section class="reality section-pad act" data-time="gold" aria-label="Floor plans and specifications">
+    <div class="wrap">
+      <div class="reality__grid">
+        <div>
+          <p class="eyebrow rv">The plan behind the promise</p>
+          <h2 class="display rv rv-d1" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">Dream, then proof</h2>
+          <p class="lede rv rv-d2" style="margin-top:20px;">The experience is the dream. This is the reality. Layouts, specifications and approvals, kept as close to the emotion as to the paperwork.</p>
+          <figure class="plan-fig rv" style="margin-top:34px;">
+            <svg viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Indicative 3 BHK floor plan">
+              <!-- outer walls -->
+              <rect x="20" y="20" width="600" height="440" stroke="currentColor" stroke-opacity="0.75" stroke-width="2.4"/>
+              <rect x="26" y="26" width="588" height="428" stroke="currentColor" stroke-opacity="0.22" stroke-width="1"/>
+              <!-- balcony strip (right, lake side) -->
+              <rect x="520" y="26" width="60" height="428" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="5 4" fill="currentColor" fill-opacity="0.05"/>
+              <text x="532" y="240" fill="currentColor" fill-opacity="0.5" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif" transform="rotate(90 550 240)">BALCONY · LAKE SIDE</text>
+              <!-- living + dining -->
+              <rect x="150" y="26" width="370" height="230" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.4"/>
+              <text x="300" y="120" fill="currentColor" fill-opacity="0.65" font-size="13" letter-spacing="2" font-family="Outfit, sans-serif" text-anchor="middle">LIVING &amp; DINING</text>
+              <text x="300" y="140" fill="currentColor" fill-opacity="0.35" font-size="10" font-family="Outfit, sans-serif" text-anchor="middle">Open plan · full-height glazing</text>
+              <!-- kitchen -->
+              <rect x="26" y="26" width="124" height="140" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.4"/>
+              <text x="88" y="95" fill="currentColor" fill-opacity="0.65" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif" text-anchor="middle">KITCHEN</text>
+              <!-- master bedroom (bottom right) -->
+              <rect x="360" y="256" width="160" height="198" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.4"/>
+              <text x="440" y="340" fill="currentColor" fill-opacity="0.65" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif" text-anchor="middle">MASTER</text>
+              <text x="440" y="356" fill="currentColor" fill-opacity="0.65" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif" text-anchor="middle">BEDROOM</text>
+              <!-- master bath -->
+              <rect x="360" y="256" width="74" height="84" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="4 3"/>
+              <text x="397" y="300" fill="currentColor" fill-opacity="0.4" font-size="9" font-family="Outfit, sans-serif" text-anchor="middle">BATH</text>
+              <!-- bedroom 2 (top-left, below kitchen) -->
+              <rect x="26" y="166" width="124" height="120" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.4"/>
+              <text x="88" y="228" fill="currentColor" fill-opacity="0.65" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif" text-anchor="middle">BEDROOM 2</text>
+              <!-- bedroom 3 (bottom-left) -->
+              <rect x="26" y="286" width="124" height="168" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.4"/>
+              <text x="88" y="370" fill="currentColor" fill-opacity="0.65" font-size="11" letter-spacing="2" font-family="Outfit, sans-serif" text-anchor="middle">BEDROOM 3</text>
+              <!-- corridor -->
+              <rect x="150" y="256" width="210" height="198" stroke="currentColor" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="6 4"/>
+              <text x="255" y="360" fill="currentColor" fill-opacity="0.35" font-size="10" letter-spacing="2" font-family="Outfit, sans-serif" text-anchor="middle">HALL</text>
+            </svg>
+            <figcaption>Indicative 3 BHK layout. Final plans as per sanctioned RERA drawings.</figcaption>
+          </figure>
+        </div>
+        <div class="rv rv-d1">
+          <div class="spec-grid">
+            <div class="spec"><span>Configurations</span><strong>3 · 3.5 · 4 BHK</strong><small>[per RERA filings]</small></div>
+            <div class="spec"><span>Homes</span><strong>540</strong><small>Across two towers</small></div>
+            <div class="spec"><span>Floors</span><strong>55</strong><small>Per tower</small></div>
+            <div class="spec"><span>Clubhouse</span><strong>50,000 sq ft</strong><small>Five zones of life</small></div>
+            <div class="spec"><span>Land</span><strong>3.6 acres</strong><small>Beside Kokapet Lake</small></div>
+            <div class="spec"><span>RERA</span><strong>P02400007478</strong><small>TG-RERA · Telangana</small></div>
+          </div>
+          <p class="lede" style="margin-top:28px;">Flexible, adaptable spaces. Generous living areas, uncluttered layouts, balconies that extend the living space, and abundant natural light. Clutter-free living, made effortless by design.</p>
+          <div class="tower-cta rv">
+            <button class="btn btn--ghost" type="button" data-open-facts>The facts</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAYMENT PLANS (gold) ============ -->
+  <section class="section-pad act" id="plans" data-time="gold" aria-label="Payment plans">
+    <div class="wrap">
+      <p class="eyebrow rv">Pricing</p>
+      <h2 class="display rv rv-d1" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">Stress-free payment plans for mindful living</h2>
+      <p class="lede rv rv-d2" style="margin-top:18px;">Experience the serenity of Elena without financial stress. Choose the plan that fits your rhythm. Download it, or share your details and the team will walk you through it.</p>
+      <div class="plans-grid">
+        <article class="plan-card rv">
+          <img class="plan-card__img" src="elena-assets/original/plan-left.webp" alt="Down Payment Plan brochure" loading="lazy">
+          <h3>Down Payment Plan</h3>
+          <p>Pay more upfront, carry less through the journey. Built for buyers who prefer to settle early and stay light.</p>
+          <div class="plan-card__actions">
+            <a class="btn btn--solid btn--sm" href="elena-assets/brochures/down-payment-40-plan.jpg" download="Lansum Elena Residences - Down Payment Plan.jpg">Download the plan</a>
+            <button class="btn btn--ghost btn--sm" type="button" data-open-brochure="#planDown">Have it explained</button>
+          </div>
+          <form class="plan-form" id="planDown" data-plan="down" novalidate>
+            <div class="field"><label for="downName">Name</label><input id="downName" name="name" type="text" autocomplete="name" placeholder="Your full name"><span class="err">Please enter your name</span></div>
+            <div class="field"><label for="downPhone">Phone</label><input id="downPhone" name="phone" type="tel" autocomplete="tel" placeholder="10 digit mobile number"><span class="err">Please enter a valid phone number</span></div>
+            <button class="btn btn--solid btn--sm" type="submit">Send me the full details</button>
+          </form>
+          <div class="form-ok" role="status">Thank you. The sales team will call you with the Down Payment Plan details.</div>
+        </article>
+        <article class="plan-card rv rv-d1">
+          <img class="plan-card__img" src="elena-assets/original/plan-right.webp" alt="Milestone Payment Plan brochure" loading="lazy">
+          <h3>Milestone Payment Plan</h3>
+          <p class="plan-price">From ₹11,000 per sq ft</p>
+          <p>Pay as the towers rise, tied to construction milestones. Designed to keep your capital flowing with the build.</p>
+          <ul class="plan-schedule">
+            <li><span>Booking</span><b>9%</b></li>
+            <li><span>Agreement of Sale</span><b>11%</b></li>
+            <li><span>Cellar &amp; podium slabs</span><b>20%</b></li>
+            <li><span>Floor slabs, 5th to 54th</span><b>40%</b></li>
+            <li><span>Finishing to handover</span><b>20%</b></li>
+          </ul>
+          <p class="plan-note">Percentages of the total sale consideration, plus GST and applicable charges. Floor rise, amenities, parking and other charges apply as per the plan.</p>
+          <div class="plan-card__actions">
+            <a class="btn btn--solid btn--sm" href="elena-assets/brochures/milestone-pricing-plan.pdf" download="Lansum Elena Residences - Milestone Pricing Plan.pdf">Download the plan</a>
+            <button class="btn btn--ghost btn--sm" type="button" data-open-brochure="#planMilestone">Have it explained</button>
+          </div>
+          <form class="plan-form" id="planMilestone" data-plan="milestone" novalidate>
+            <div class="field"><label for="mileName">Name</label><input id="mileName" name="name" type="text" autocomplete="name" placeholder="Your full name"><span class="err">Please enter your name</span></div>
+            <div class="field"><label for="milePhone">Phone</label><input id="milePhone" name="phone" type="tel" autocomplete="tel" placeholder="10 digit mobile number"><span class="err">Please enter a valid phone number</span></div>
+            <button class="btn btn--solid btn--sm" type="submit">Send me the full details</button>
+          </form>
+          <div class="form-ok" role="status">Thank you. The sales team will call you with the Milestone Payment Plan details.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ELENA AS IT UNFOLDS (gold) ============ -->
+  <section class="section-pad act" data-time="gold" aria-label="Construction updates">
+    <div class="wrap">
+      <p class="eyebrow rv">Elena, as it unfolds</p>
+      <h2 class="display rv rv-d1" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">The story, told in real time</h2>
+      <p class="lede rv rv-d2" style="margin-top:18px;">We believe trust grows with transparency, so we share the story as it unfolds. Construction milestones and design decisions, in a quiet window into life at Elena.</p>
+      <div class="news-grid">
+        <figure class="news-card rv"><a href="elena-assets/brochures/news-2026-08.pdf" target="_blank" rel="noopener" aria-label="Open the August 2026 newsletter (PDF)"><img src="elena-assets/original/news-aug-2026.avif" alt="Elena newsletter, August 2026" loading="lazy"></a><figcaption>August 2026</figcaption></figure>
+        <figure class="news-card rv"><a href="elena-assets/brochures/news-2026-04.pdf" target="_blank" rel="noopener" aria-label="Open the newsletter, The difference is visible (PDF)"><img src="elena-assets/original/news-difference.avif" alt="Elena newsletter, The difference is visible" loading="lazy"></a><figcaption>The difference is visible</figcaption></figure>
+        <figure class="news-card rv"><a href="elena-assets/brochures/news-2026-01.pdf" target="_blank" rel="noopener" aria-label="Open the newsletter, A new year (PDF)"><img src="elena-assets/original/news-new-year.avif" alt="Elena newsletter, A new year" loading="lazy"></a><figcaption>A new year</figcaption></figure>
+        <figure class="news-card rv"><a href="elena-assets/brochures/news-2025-10.pdf" target="_blank" rel="noopener" aria-label="Open the October 2025 newsletter (PDF)"><img src="elena-assets/original/news-oct-2025.avif" alt="Elena newsletter, October 2025" loading="lazy"></a><figcaption>October 2025</figcaption></figure>
+        <figure class="news-card rv"><a href="elena-assets/brochures/news-2025-07.pdf" target="_blank" rel="noopener" aria-label="Open the July 2025 newsletter (PDF)"><img src="elena-assets/original/news-jul-2025.webp" alt="Elena newsletter, July 2025" loading="lazy"></a><figcaption>July 2025</figcaption></figure>
+        <figure class="news-card rv"><a href="elena-assets/brochures/news-2025-04.pdf" target="_blank" rel="noopener" aria-label="Open the April 2025 newsletter (PDF)"><img src="elena-assets/original/news-apr-2025.webp" alt="Elena newsletter, April 2025" loading="lazy"></a><figcaption>April 2025</figcaption></figure>
+        <figure class="news-card rv"><a href="elena-assets/brochures/news-2024-11.pdf" target="_blank" rel="noopener" aria-label="Open the November 2024 newsletter (PDF)"><img src="elena-assets/original/news-nov-2024.webp" alt="Elena newsletter, November 2024" loading="lazy"></a><figcaption>November 2024</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACT V · THE WORLD (night) ============ -->
+  <section class="act-divider act" id="worldAct" data-time="night" aria-label="The World">
+    <div class="act-divider__bg"><img src="elena-assets/original/photo-tower.jpg" alt="The tower of Elena rising over Kokapet" loading="lazy"></div>
+    <div class="act-divider__veil" aria-hidden="true"></div>
+    <div class="act-divider__content">
+      <p class="act-divider__time rv">Night</p>
+      <h2 class="rv rv-d1">The World</h2>
+      <p class="act-divider__note rv rv-d2">Kokapet · Financial District · Hyderabad</p>
+    </div>
+  </section>
+
+  <section class="section-pad act" data-time="night">
+    <div class="wrap">
+      <p class="eyebrow rv">Life on the Golden Mile, Kokapet</p>
+      <h2 class="display rv rv-d1" style="font-size:clamp(32px,4vw,54px);margin-top:18px;">Away from the noise, right in the heart of it</h2>
+      <p class="lede rv rv-d2" style="margin-top:18px;">Time feels abundant at Elena because it is well spent. Beauty, peace and quiet, without giving up easy access to schools, hospitals, malls and restaurants.</p>
+      <div class="loc-stats">
+        <div class="loc-stat rv"><div class="loc-stat__num">2<small>min</small></div><p>from ORR Exit 1</p></div>
+        <div class="loc-stat rv rv-d1"><div class="loc-stat__num">5<small>min</small></div><p>from the Financial District</p></div>
+        <div class="loc-stat rv rv-d2"><div class="loc-stat__num">10<small>min</small></div><p>from international schools and hotels</p></div>
+        <div class="loc-stat rv rv-d3"><div class="loc-stat__num">25<small>min</small></div><p>from the airport</p></div>
+      </div>
+      <div class="loc-rows">
+        <div class="loc-row rv">
+          <h4>Reclaim work-life balance</h4>
+          <p>Kokapet's position on the Outer Ring Road keeps Hitech City, Gachibowli and the Financial District close. Mornings become less rushed, evenings are spent reconnecting with loved ones instead of battling traffic.</p>
+        </div>
+        <div class="loc-row rv">
+          <h4>More time for what matters</h4>
+          <p>World-class schools nearby, including Oakridge International and The Shri Ram Universal. Renowned hospitals such as Continental and AIG. The freedom to focus on leisure, family and the quiet beauty of Kokapet Lake.</p>
+        </div>
+        <div class="loc-row rv">
+          <h4>A life less hurried</h4>
+          <p>Step away from the city's chaos without surrendering its conveniences. A fine meal at Zega, The Sheraton, or at Mrs. Mage, The Hyatt. The latest attractions in Gachibowli and Hitec City, all minutes away, with a peaceful retreat waiting at the end of the drive.</p>
+        </div>
+      </div>
+      <figure class="map-fig rv">
+        <img src="elena-assets/original/map.webp" alt="Location map of Elena Residences in Kokapet, Hyderabad" loading="lazy">
+        <figcaption>Golden Mile Extension Road, Kokapet · Off ORR Exit 1</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ EMOTIONAL ENDING (night) ============ -->
+  <section class="ending act" data-time="night" aria-label="Your Elena awaits">
+    <div class="ending__bg"><img src="elena-assets/original/photo-towers.jpg" alt="" aria-hidden="true" loading="lazy"></div>
+    <div class="ending__veil" aria-hidden="true"></div>
+    <div class="ending__inner">
+      <p class="eyebrow rv">Night at Elena</p>
+      <h2 class="rv rv-d1">Some homes give you more space.<br>Some give you more <em>time</em>.<br>Elena was designed for both.</h2>
+      <div class="ending__cta rv rv-d2">
+        <button class="btn btn--solid" id="createModalBtn" type="button">Create my Elena</button>
+        <a class="btn btn--ghost" href="#worldAct">Book a private visit</a>
+      </div>
+      <p class="ending__awaits rv rv-d3">Your Elena awaits</p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="footer__logo" src="elena-assets/original/logo-white.webp" alt="Elena Residences" loading="lazy">
+        <h5>Elena Residences</h5>
+        <p>Two towers beside Kokapet Lake, designed around the pause. A development by Lansum Enpoint Developers LLP.</p>
+        <p style="margin-top:16px;font-size:13px;color:var(--text-faint);">RERA: TG-RERA P02400007478<br>rera.telangana.gov.in</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#pauseAct">The Pause</a></li>
+          <li><a href="#homeAct">The Home</a></li>
+          <li><a href="#plans">Pricing</a></li>
+          <li><a href="#worldAct">The World</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+914069693333">+91 40 6969 3333</a></li>
+          <li><a href="mailto:contactus@elenaresidences.com">contactus@elenaresidences.com</a></li>
+          <li><a href="#arrival">Golden Mile Extension Road, Kokapet, near ORR Exit 1, Hyderabad 500075</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+        <p style="margin-top:16px;font-size:13px;color:var(--text-faint);">All information on this website is illustrative. Verify details with official RERA records.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2024 Lansum Enpoint Developers LLP. All rights reserved.</span>
+      <span class="footer__credit">Towers: procedural stand-in (Three.js, no external model)</span>
+      <div class="footer__legal">
+        <a href="https://www.elenaresidences.com/" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://www.elenaresidences.com/" target="_blank" rel="noopener">Terms and Conditions</a>
+        <a href="https://www.elenaresidences.com/" target="_blank" rel="noopener">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CREATE MY ELENA MODAL ============ -->
+<div class="modal" id="createModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal__card">
+    <div class="modal__head">
+      <div>
+        <h3 id="modalTitle">Create <em>my Elena</em></h3>
+        <p>Three choices, and your home begins to take shape.</p>
+      </div>
+      <button class="modal__close" id="createModalClose" type="button" aria-label="Close">Close</button>
+    </div>
+    <div class="steps" aria-hidden="true"><div class="step-dot on"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div></div>
+
+    <!-- step 1: residence -->
+    <div class="step-pane active" data-step="0">
+      <p class="eyebrow" style="margin-bottom:16px;">Step 1 · The residence</p>
+      <div class="opt-grid">
+        <button class="opt-card active" type="button" data-key="size" data-opt="3 BHK"><b>3 BHK</b><small>A calm, complete home for the pause</small></button>
+        <button class="opt-card" type="button" data-key="size" data-opt="3.5 BHK"><b>3.5 BHK</b><small>An extra room for your quiet corner</small></button>
+        <button class="opt-card" type="button" data-key="size" data-opt="4 BHK"><b>4 BHK</b><small>Space for family, guests and growth</small></button>
+        <button class="opt-card single" type="button" data-key="floor" data-opt="Low floor"><b>Low floor</b><small>Closer to the gardens</small></button>
+        <button class="opt-card single" type="button" data-key="floor" data-opt="Mid floor"><b>Mid floor</b><small>Level with the sky gardens</small></button>
+        <button class="opt-card single" type="button" data-key="floor" data-opt="High floor"><b>High floor</b><small>Lake and city, far below</small></button>
+      </div>
+    </div>
+
+    <!-- step 2: lifestyle -->
+    <div class="step-pane" data-step="1">
+      <p class="eyebrow" style="margin-bottom:16px;">Step 2 · The rhythm</p>
+      <div class="opt-grid">
+        <button class="opt-card" type="button" data-key="lifestyle" data-opt="slow"><b>Slow</b><small>Gardens, reading, meditation, lotus ponds</small></button>
+        <button class="opt-card" type="button" data-key="lifestyle" data-opt="alive"><b>Alive</b><small>Pool, squash, fitness, yoga decks</small></button>
+        <button class="opt-card" type="button" data-key="lifestyle" data-opt="together"><b>Together</b><small>Clubhouse, dining, amphitheatre, community</small></button>
+        <button class="opt-card" type="button" data-key="lifestyle" data-opt="home"><b>Home</b><small>Interiors, balcony, family time</small></button>
+      </div>
+    </div>
+
+    <!-- step 3: summary -->
+    <div class="step-pane" data-step="2">
+      <p class="eyebrow" style="margin-bottom:16px;">Step 3 · Review</p>
+      <div class="summary-card">
+        <h4>Your Elena</h4>
+        <ul>
+          <li><span>Residence</span><b id="sumSize">3 BHK</b></li>
+          <li><span>Floor</span><b id="sumFloor">Mid floor</b></li>
+          <li><span>Rhythm</span><b id="sumLife">Your rhythm</b></li>
+          <li><span>View</span><b id="sumView">To be chosen</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- step 4: visit -->
+    <div class="step-pane" data-step="3">
+      <p class="eyebrow" style="margin-bottom:16px;">The private experience</p>
+      <h3 style="font-family:var(--font-display);font-size:30px;font-weight:400;color:#f4efe4;margin-bottom:6px;">You have seen Elena.<br>Now walk through it.</h3>
+      <p style="font-size:13.5px;color:rgba(236,231,219,0.6);margin-bottom:20px;">When would you like to visit?</p>
+      <div class="visit-opts">
+        <button class="opt-card" type="button" data-key="visit" data-opt="Today"><b>Today</b><small>If it is still early</small></button>
+        <button class="opt-card" type="button" data-key="visit" data-opt="This week"><b>This week</b><small>At your convenience</small></button>
+        <button class="opt-card" type="button" data-key="visit" data-opt="Choose a date"><b>Choose a date</b><small>The team will call you</small></button>
+      </div>
+      <p style="font-size:13.5px;color:rgba(236,231,219,0.6);margin:20px 0 12px;">Who is exploring?</p>
+      <div class="visit-opts">
+        <button class="opt-card" type="button" data-key="company" data-opt="I'll visit alone"><b>I'll visit alone</b><small>Quiet and focused</small></button>
+        <button class="opt-card" type="button" data-key="company" data-opt="I'll bring my family"><b>I'll bring my family</b><small>Everyone should feel it</small></button>
+        <button class="opt-card" type="button" data-key="company" data-opt="Exploring for investment"><b>Exploring for investment</b><small>Numbers first, then emotion</small></button>
+      </div>
+      <div class="modal__nav">
+        <button class="btn btn--ghost btn--sm" id="stepVisit" type="button" style="margin-left:auto;">Confirm my visit</button>
+      </div>
+    </div>
+
+    <div class="modal__nav">
+      <button class="btn btn--ghost btn--sm btn--back" id="stepBack" type="button">Back</button>
+      <button class="btn btn--solid btn--sm" id="stepNext" type="button">Begin</button>
+    </div>
+
+    <!-- done -->
+    <div class="step-pane" data-step="4">
+      <div class="done-state">
+        <div class="mark" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h4>Your Elena is <em>ready</em>.</h4>
+        <p id="doneResidence"></p>
+        <p>Our team will reach out to schedule your private visit. Until then, the pause is yours.</p>
+        <button class="btn btn--solid" id="doneClose" type="button" style="margin-top:26px;">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <h4 id="toastTitle">Saved to My Elena</h4>
+  <p id="toastBody"></p>
+</div>
+
+<!-- ============ RE-ENTRY ============ -->
+<div class="toast" id="reentryToast" role="status" aria-live="polite">
+  <h4>Welcome back to Elena</h4>
+  <p>Your day is still here. Continue where you left off, or begin again.</p>
+  <div class="toast__actions">
+    <button class="btn btn--solid btn--sm" id="reentryContinue" type="button">Continue</button>
+    <button class="btn btn--ghost btn--sm" id="reentryRestart" type="button">Start again</button>
+  </div>
+</div>
+
+<script src="elena-assets/elena.js"></script>
+<!-- scroll motion layer (Lenis + GSAP + ScrollTrigger) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="elena-assets/motion.js"></script>
+<!-- ============ IMMERSIVE 3D WEBGL LAYER (ambient fallback behind the video hero) ============ -->
+<script type="module" src="elena-assets/scene3d.js"></script>
+<!-- ============ SCROLL-SCRUBBED VIDEO HERO ============ -->
+<script src="elena-assets/scrollvideo.js" defer></script>
+</body>
+</html>
